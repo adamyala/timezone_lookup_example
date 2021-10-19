@@ -13,7 +13,11 @@ services:
 
   web:
     build: .
-    command: python manage.py migrate
+    entrypoint: ['/bin/sh','-c']
+    command:
+    - |
+       python manage.py migrate
+       python manage.py create_cross_timezone_data
     volumes:
       - .:/var/www
     depends_on:
