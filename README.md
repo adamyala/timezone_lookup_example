@@ -3,8 +3,9 @@
 ```shell
 docker compose build
 docker compose up
-poetry run python manage.py create_cross_timezone_data
 ```
+
+URI to connect to database `postgresql://postgres:postgres@0.0.0.0`
 
 PSQL query to return all TODOs after their scheduled time but still today in the user's timezone
 ```postgresql
